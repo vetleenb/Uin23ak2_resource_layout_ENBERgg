@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="csssssssssssssssss.css">
+    <title>Ressursside</title>
+</head>
+<body>
+<header><h1>Ressursarkiv</h1></header>
+<nav>
+    <button onclick="knappENNN()" class="btn
+    one">Kategori 1</button>
+    <button onclick="knappTOOO()" class="btn
+    two">Kategori 2</button>
+    <button onclick="knappTREEE()" class="btn
+    three">Kategori 3</button>
+</nav>
+<main>
+<article id="main"></article>
+</main>
+
+
+    
+</body>
+
+
+
+<script>
+   const button = document.getElementById("btnone");
+    const buttonn = document.getElementById("btntwo");
+   const buttonnn = document.getElementById("btnthree");
+   const articlee = document.getElementById("main");
+
+    function knappENNN() {
+        main.innerHTML = `<h2>${resources[0].category}</h2> <p>${resources[0].text}</p> <p>${resources[0].sources[0].title}:<a href=" ${resources[0].sources[0].url}"">link</a></p><p>${resources[0].sources[1].title}:<a href="${resources[0].sources[1].url}">link</a></p><p>${resources[0].sources[2].title}:<a href="${resources[0].sources[2].url}">link</a></p> `
+    }
+ 
+    
+
+
+
+    function knappTOOO() {
+        main.innerHTML = `<h2>${resources[1].category}</h2> <p>${resources[1].text}</p> <p>${resources[1].sources[0].title}:<a href=" ${resources[1].sources[0].url}"">link</a></p><p>${resources[1].sources[1].title}:<a href="${resources[1].sources[1].url}">link</a></p><p>${resources[1].sources[2].title}:<a href="${resources[1].sources[2].url}">link</a></p> `
+    }
+    function knappTREEE() {
+        main.innerHTML = `<h2>${resources[2].category}</h2> <p>${resources[2].text}</p> <p>${resources[2].sources[0].title}:<a href=" ${resources[2].sources[0].url}"">link</a></p><p>${resources[2].sources[1].title}:<a href="${resources[2].sources[1].url}">link</a></p><p>${resources[2].sources[2].title}:<a href="${resources[2].sources[2].url}">link</a></p> `
+    }
+    
+    
+
+   const resources = [
+    {
+        category: "HTML",
+        text: "HTML står for HyperText Markup Language, og er et strukturspråk som brukes for å lage strukturer til nettside- og applikasjonsgrensesnitt.",
+        sources: [
+            {
+                title: "W3Schools",
+                url: "https://www.w3schools.com/html/"
+            },
+            {
+                title: "HTML Living standard",
+                url: "https://html.spec.whatwg.org/multipage/"
+            },
+            {
+                title: "HTML.com Tutorials",
+                url: "https://html.com/"
+            },
+        ]
+    },
+    {
+        category: "CSS",
+        text: "CSS står for Cascading StyleSheets, og brukes for å sette stilregler på HTML-elementer.",
+        sources: [
+            {
+                title: "W3Schools",
+                url: "https://www.w3schools.com/css/"
+            },
+            {
+                title: "W3C HTML & CSS Standards",
+                url: "https://www.w3.org/standards/webdesign/htmlcss.html"
+            },
+            {
+                title: "W3C CSS Validator",
+                url: "https://jigsaw.w3.org/css-validator/"
+            },
+            {
+                title: "CSS Tricks",
+                url: "https://css-tricks.com/"
+            },
+        ]
+    },
+    {
+        category: "JavaScript",
+        text: "JavaScript er et scriptspråk basert på EcmaScript. JavaScript kjører direkte i nettleseren, og brukes ofte til å manipulere HTML og CSS i webgrensnesnitt.",
+        sources: [
+            {
+                title: "W3Schools",
+                url: "https://www.w3schools.com/js/"
+            },
+            {
+                title: "MDN Web Docs",
+                url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            },
+            {
+                title: "How to read JavaScript Documentation",
+                url: "https://www.youtube.com/watch?v=O3iR-CIufKM"
+            },
+        ]
+    },
+    
+   
+    
+]
+
+</script>
+
+</html>

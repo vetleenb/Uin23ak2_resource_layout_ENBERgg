@@ -1,0 +1,42 @@
+.btn {
+   border: center;
+   text-align: center;
+   background-color:whitesmoke; 
+   padding: 18px 38px;
+   font-size: 26px;
+   cursor: pointer;
+   display: inline-block;
+
+}
+
+.btn:hover {
+    background: aqua;
+    
+}
+
+nav {
+    text-align: center;
+}
+
+
+header {
+    text-align: center;
+    font-size: 40px;
+    
+    
+    
+}
+
+
+
+
+article {
+    margin: auto;
+    font-size: 18px;
+    width: 1000px;
+    height: 300px;
+    border-top: 3px aqua solid;
+    border-left: 3px solid;
+    border-right: 3px solid;
+    border-bottom: 3px solid;
+}
