@@ -10,15 +10,19 @@
 <body>
 <header><h1>Ressursarkiv</h1></header>
 <nav>
-    <button onclick="knappENNN()" class="btn
+    <button onclick="innhold(0)" class="btn     
     one">Kategori 1</button>
-    <button onclick="knappTOOO()" class="btn
+    <button onclick="innhold(1)" class="btn
     two">Kategori 2</button>
-    <button onclick="knappTREEE()" class="btn
+    <button onclick="innhold(2)" class="btn
     three">Kategori 3</button>
+    <button onclick="innhold(3)" class="btn
+    four">Kategori 4</button>
+    <button onclick="innhold(4)" class="btn     
+    five">Kategori 5</button>                  <!--Laget 5 knapper med onclick funksjon som starter funksjon innhold og sender med parameter-->
 </nav>
 <main>
-<article id="main"></article>
+<article id="main"></article>   <!--Lagt til en article med ID innenfor main. -->
 </main>
 
 
@@ -28,25 +32,21 @@
 
 
 <script>
-   const button = document.getElementById("btnone");
-    const buttonn = document.getElementById("btntwo");
-   const buttonnn = document.getElementById("btnthree");
    const articlee = document.getElementById("main");
+   //Hentet ut article tag fra HTML. 
 
-    function knappENNN() {
-        main.innerHTML = `<h2>${resources[0].category}</h2> <p>${resources[0].text}</p> <p>${resources[0].sources[0].title}:<a href=" ${resources[0].sources[0].url}"">link</a></p><p>${resources[0].sources[1].title}:<a href="${resources[0].sources[1].url}">link</a></p><p>${resources[0].sources[2].title}:<a href="${resources[0].sources[2].url}">link</a></p> `
+    function innhold(x){
+        //bruker parameter til å se hvilen posisjon i arrayen resources som skal brukes
+        //setter først opp den koden som skal bare komme en gang(overskrift og brødtekst)
+        main.innerHTML = `<h2>${resources[x].category}</h2><p>${resources[x].text}</p><ul>`
+        //lager en map som går gjennom alle objektene i sources og får ut listeelementene
+        resources[x].sources.map(li => {
+            main.innerHTML += `<li><a href ="${li.url}" >${li.title}</a></li>`
+        })
+        //legger til </ul> for å avslutte listen med linker
+        main.innerHTML += `</ul>`
     }
- 
     
-
-
-
-    function knappTOOO() {
-        main.innerHTML = `<h2>${resources[1].category}</h2> <p>${resources[1].text}</p> <p>${resources[1].sources[0].title}:<a href=" ${resources[1].sources[0].url}"">link</a></p><p>${resources[1].sources[1].title}:<a href="${resources[1].sources[1].url}">link</a></p><p>${resources[1].sources[2].title}:<a href="${resources[1].sources[2].url}">link</a></p> `
-    }
-    function knappTREEE() {
-        main.innerHTML = `<h2>${resources[2].category}</h2> <p>${resources[2].text}</p> <p>${resources[2].sources[0].title}:<a href=" ${resources[2].sources[0].url}"">link</a></p><p>${resources[2].sources[1].title}:<a href="${resources[2].sources[1].url}">link</a></p><p>${resources[2].sources[2].title}:<a href="${resources[2].sources[2].url}">link</a></p> `
-    }
     
     
 
@@ -109,11 +109,46 @@
             },
         ]
     },
-    
-   
+    {
+    category: "React",
+        text: "React er et rammeverk bygget i JavaScript. React bruker komponenter og states for å lage en levende frontend.",
+        sources: [
+            {
+                title: "React documentation",
+                url: "https://reactjs.org/docs/getting-started.html"
+            },
+            {
+                title: "W3Schools",
+                url: "https://www.w3schools.com/REACT/DEFAULT.ASP"
+            },
+            {
+                title: "How to read JavaScript Documentation",
+                url: "https://www.youtube.com/watch?v=O3iR-CIufKM"
+            },
+        ]
+    },
+    {
+        category: "Sanity and headless CMS",
+        text: "Sanity er et headless CMS som står for innholdsadministrasjon. Innhold hentes inn i applikasjoner via GROQ-spørringer.",
+        sources: [
+            {
+                title: "Sanity documentation",
+                url: "https://www.sanity.io/docs"
+            },
+            {
+                title: "OnCrawl: a beginners guide to headless CMS",
+                url: "https://www.oncrawl.com/technical-seo/beginners-guide-headless-cms/"
+            },
+            {
+                title: "Section.io: Getting started with Sanity CMS",
+                url: "https://www.section.io/engineering-education/getting-started-with-sanity-cms/"
+            },
+        ]
+    }
     
 ]
 
 </script>
 
 </html>
+
