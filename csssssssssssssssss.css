@@ -1,7 +1,7 @@
 .btn {
    border: center;
    text-align: center;
-   background-color:whitesmoke; 
+   background-color:whitesmoke;  /*Her har jeg lagt inn css for kategori-knappene.  */
    padding: 18px 38px;
    font-size: 26px;
    cursor: pointer;
@@ -9,18 +9,18 @@
 
 }
 
-.btn:hover {
+.btn:hover {                     /*Her har jeg gjort slik at knappene får farge da musa går over de. */
     background: aqua;
     
 }
 
 nav {
-    text-align: center;
+    text-align: center;        /*Sentrert knapper*/
 }
 
 
 header {
-    text-align: center;
+    text-align: center;       /*Skriftstørrelse og sentrering av overskrift*/
     font-size: 40px;
     
     
@@ -33,10 +33,21 @@ header {
 article {
     margin: auto;
     font-size: 18px;
-    width: 1000px;
+    width: 1000px;                  /*Dette er css for textboksen. */
     height: 300px;
     border-top: 3px aqua solid;
     border-left: 3px solid;
     border-right: 3px solid;
     border-bottom: 3px solid;
+}
+
+@media only screen and (max-width: 1000px){      /*Responsivt for midre enheter. */
+    article{
+       width: 600px;
+    }
+}
+@media only screen and (max-width: 600px){      /*Responsivt for midre enheter. */
+    article{
+       width: 350px;
+    }
 }
